@@ -16,7 +16,7 @@ RRULLD  Ожидаемый вывод: 1
 RrUUlLDDR Ожидаемый вывод: 2
 
 
-Solution
+Решение
 ==========
 ```kotlin
 class Workplace(
