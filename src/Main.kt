@@ -7,22 +7,21 @@ enum class Direction(val symbol: Char) {
     UP('U'),
     RIGHT('R'),
     DOWN('D'),
-    LEFT('U'),
+    LEFT('L'),
 }
 
 class Round(
     val startingPosition: Workplace,
 ) {
-    private val workplaceToVisitsMap = mutableMapOf<Workplace, Int>()
+    private val workplaceToVisitsMap = mutableMapOf(startingPosition to 1)
     private var currentPositionX = startingPosition.x
     private var currentPositionY = startingPosition.y
 
     fun start() {
+        print("Please enter the path: ")
         val path = readlnOrNull()
             ?.uppercase()
-            ?.filter { direction ->
-                direction in Direction.entries.map(Direction::symbol)
-            }
+            ?.filter { direction -> direction in validDirections }
             ?.take(MAX_PATH_LENGTH)
             ?: return
 
@@ -44,6 +43,7 @@ class Round(
 
     companion object {
         private const val MAX_PATH_LENGTH = 1000
+        private val validDirections = Direction.entries.map { it.symbol }
     }
 }
 
