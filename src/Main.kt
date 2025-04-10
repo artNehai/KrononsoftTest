@@ -1,4 +1,4 @@
-data class Workplace(
+class Workplace(
     val x: Int,
     val y: Int,
 )
