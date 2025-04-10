@@ -89,3 +89,18 @@ fun readInt(accompanyingText: String = ""): Int {
     }
 }
 ```
+
+Ввод
+==========
+```kotlin
+Choose the starting position:
+x = 3
+y = -2
+Please enter the path: RrUUlLDDR
+```
+
+Вывод
+==========
+```kotlin
+Number of workplaces visited more than once: 2
+```
